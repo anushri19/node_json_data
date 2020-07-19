@@ -1,0 +1,17 @@
+node_json.settings:
+  path: '/admin/config/api'
+  defaults:
+    _form: '\Drupal\node_json\Form\NodeJsonForm'
+    _title: 'API KEY'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+
+node_json.getApiDataController:
+  path: '/data/{apikey}/{node_id}'
+  defaults:
+    _controller: '\Drupal\node_json\Controller\getApiDataController::getApiDataController'
+    _title: 'getApiDataController'
+  requirements:
+    _permission: 'access administration pages'
